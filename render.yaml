@@ -7,3 +7,4 @@ services:
     startCommand: npm run start
     envVars:
       - key: VITE_API_BASE_URL
+        value: "" # MODIFIED: Added an empty value to make the file valid.
