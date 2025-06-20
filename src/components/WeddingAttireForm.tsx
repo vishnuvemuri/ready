@@ -1198,31 +1198,7 @@ const WeddingAttireForm: React.FC<WeddingAttireFormProps> = ({ onBack, vendor, m
         </div>
 
         {/* Footer */}
-        <div className="sticky bottom-0 bg-white border-t border-gray-200 p-6 flex items-center justify-between rounded-b-xl">
-          <button
-            onClick={onBack} // MODIFIED: Use the onBack prop
-            className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
-          >
-            Cancel
-          </button>
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={() => setPreviewTab(previewTab === 'listing' ? 'detailed' : 'listing')}
-              className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center space-x-2"
-            >
-              <Eye className="h-4 w-4" />
-              <span>Preview</span>
-            </button>
-            <button
-              onClick={handleSubmit}
-              disabled={isLoading}
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center space-x-2 disabled:opacity-50"
-            >
-              <Save className="h-4 w-4" />
-              <span>{isLoading ? 'Saving...' : 'Save Vendor'}</span>
-            </button>
-          </div>
-        </div>
+       
     </div>
   );
 };
