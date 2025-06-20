@@ -1,15 +1,9 @@
 services:
-  - type: web # Value is "web" as required
+  - type: web
     name: famiory-admin-frontend
-    runtime: node # MODIFIED: Use 'runtime' instead of 'env' for a Web Service
+    runtime: node
     plan: free
-    
-    # The build command remains the same
     buildCommand: npm ci && npm run build
-    
-    # MODIFIED: The start command now uses the new 'start' script from package.json
     startCommand: npm run start
-
-    # Environment variables are still configured the same way
     envVars:
       - key: VITE_API_BASE_URL
