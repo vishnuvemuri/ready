@@ -1322,32 +1322,7 @@ const MakeupHairstylistForm: React.FC<MakeupHairstylistFormProps> = ({ onBack, a
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="sticky bottom-0 bg-white border-t border-gray-200 p-6 flex items-center justify-between z-10 rounded-b-2xl">
-          <button
-            onClick={onBack} // MODIFIED: Changed from onClose to onBack
-            className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
-          >
-            Cancel
-          </button>
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={() => setPreviewTab(previewTab === 'listing' ? 'detailed' : 'listing')}
-              className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center space-x-2"
-            >
-              <Eye className="h-4 w-4" />
-              <span>Preview</span>
-            </button>
-            <button
-              onClick={handleSubmit}
-              disabled={isLoading}
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center space-x-2 disabled:opacity-50"
-            >
-              <Save className="h-4 w-4" />
-              <span>{isLoading ? 'Saving...' : 'Save Artist'}</span>
-            </button>
-          </div>
-        </div>
+        
     </div>
   );
 };
